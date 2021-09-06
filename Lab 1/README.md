@@ -70,11 +70,21 @@ The interactive device can be anything *except* a computer, a tablet computer or
 
 \*\***Describe your setting, players, activity and goals here.**\*\*
 
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
+The device here is a shopping cart with a built-in budgeting scale. It features a light that glows more and more red the closer you get to your budget cap. I am working on this with James Parsons, who is also in CS.
+
+_Setting:_ Since it is a shopping cart, the most appropriate setting would be a department store or grocery market -- anywhere where a shopping cart would be used normally.
+
+_Players:_ Within the interaciton itself, the main players are the consumers themselves. Perhaps a store worker would have to occaisionally fix the cart, but otherwise, the main players are people shopping for goods. There are other shoppers there, as well as store workers nearby.
+
+_Activity_: The light on the shopping cart starts green, and glows increasingly redder as the contents of the cart reaches the shopper's inputted budget. Other shoppers and store workers might be able to see this light, which is an important interaction to keep in mind.
+
+_Goals_: The goal of the main player, the shopper, is to stay under an allocated budget. The use of a light makes this visually easier to track.
 
 \*\***Include a picture of your storyboard here**\*\*
 
-Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
+![figure1](figure1.jpeg)
+
+_This storyboard was illustrated by James._
 
 \*\***Summarize feedback you got here.**\*\*
 
