@@ -93,6 +93,8 @@ _This storyboard was illustrated by James._
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
+\*\***PEER EDITORS: You can find the videos of students demoing the (imaginary) prototype, [here](https://youtu.be/dY1QT0GOFiI) and [here](https://youtu.be/eKWMFM6ovLE).**\*\*
+
 \*\***Are there things that seemed better on paper than acted out?**\*\*
 
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
