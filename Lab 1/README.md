@@ -160,3 +160,21 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity. 
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
+
+_This is an updated version of the plan written above, according to the new features James and I planned._
+
+The device here is a shopping cart with a built-in budgeting scale. It features a light that glows more and more red the closer you get to your budget cap. If you add fruit, it blinks the color of the fruit x times, where x is the number of fruit being added. It also features a pressure sensor at the bottom of the cart, which weighs weighted items and calculates the added cost to your total (like grapes or broccoli). As before, I am working on this with James Parsons, who is also in CS.
+
+_Setting:_ Since it is a shopping cart, the most appropriate setting would be a department store or grocery market -- anywhere where a shopping cart would be used normally.
+
+_Players:_ Within the interaciton itself, the main players are the consumers themselves. Perhaps a store worker would have to occaisionally fix the cart, but otherwise, the main players are people shopping for goods. There are other shoppers there, as well as store workers nearby.
+
+_Activity_: The light on the shopping cart starts green, and glows increasingly redder as the contents of the cart reaches the shopper's inputted budget. If the shopper adds fruit sold on a by-unit basis, like apples or bananas, the cart will flash the color of the fruit once for every fruit added (for example, adding three apples would cause the cart to blink red three times). Additionally, a pressure sensor at the bottom of the cart weighs items that are on a by-pound basis, like grapes, broccoli and peanuts. It then calculates the additional cost of this food and updates the budget-tracking light.
+
+_Goals_: The goal of the main player, the shopper, is to stay under an allocated budget. The use of a light makes this visually easier to track.
+
+**Updated storyboard:**
+
+![figure2](figure2.jpeg)
+
+## Click [here](https://youtu.be/tRr4QHvQIA8) to view the second set of demos!
