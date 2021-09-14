@@ -189,6 +189,6 @@ _Goals_: The goal of the main player, the shopper, is to stay under an allocated
 
 ![cart3](https://user-images.githubusercontent.com/89811189/132539640-64462e0d-586c-4a08-9887-ce1666056b75.JPG)
 
-https://github.com/agforero/Interactive-Lab-Hub/tree/Fall2021/Lab%201#staging-interaction-part-2
+https://user-images.githubusercontent.com/89811189/132542256-54b56667-3202-4c78-b9b1-b356a0513531.mp4
 
 *I forgot to include these figures when submitting the GitHub link earlier, but here they are :)*
