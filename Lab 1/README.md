@@ -10,7 +10,7 @@ For lab this week, we draw on this and other inspirations from theatre to stage 
 
 _Make sure you read all the instructions and understand the whole of the laboratory activity before starting!_
 
-
+## Scroll down to [Part 2](https://github.com/agforero/Interactive-Lab-Hub/tree/Fall2021/Lab%201#staging-interaction-part-2) to see the second week's work!
 
 ## Prep
 
@@ -180,3 +180,15 @@ _Goals_: The goal of the main player, the shopper, is to stay under an allocated
 ![figure2](figure2.jpeg)
 
 ## Click [here](https://youtu.be/tRr4QHvQIA8) to view the second set of demos!
+
+## Gallery:
+
+![cart1](https://user-images.githubusercontent.com/89811189/132539640-64462e0d-586c-4a08-9887-ce1666056b75.JPG)
+
+![cart2](https://user-images.githubusercontent.com/89811189/132539628-fcb89de2-ec78-4f68-bdc8-8a6a17323b97.JPG)
+
+![cart3](https://user-images.githubusercontent.com/89811189/132539640-64462e0d-586c-4a08-9887-ce1666056b75.JPG)
+
+![vid1](https://user-images.githubusercontent.com/89811189/132542256-54b56667-3202-4c78-b9b1-b356a0513531.mp4)
+
+*I forgot to include these figures when submitting the GitHub link earlier, but here they are :)*
