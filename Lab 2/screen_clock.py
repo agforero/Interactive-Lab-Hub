@@ -53,18 +53,58 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+# font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font = ImageFont.truetype("SpaceMono-Regular.ttf", 18)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
+def unpackTimeToBin(TIME):
+    units = [int(unit) for unit in TIME.split(',')]
+    bins = [bin(unit)[2:] for unit in units]    
+
+    bins_distributedzeros = []
+    for entry in bins:
+        bins_distributedzeros.append(f"{'0' * (8-len(entry))}" + entry)
+
+    ret = []
+    labels = [
+            " month",
+            "   day",
+            "  year",
+            "  hour",
+            "minute",
+            "second"
+            ]
+    for i, entry in enumerate(bins_distributedzeros):
+        thisAddition = labels[i]
+        for ch in entry:
+            if ch == '0':
+                thisAddition += "  "
+
+            else:
+                thisAddition += "• "
+
+        ret.append(thisAddition)
+
+    return ret
+
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
+    y = top
+    TIME = time.strftime("%m,%d,%y,%H,%M,%S")
+    TIME_UNPACKED = unpackTimeToBin(TIME)
+    for entry in TIME_UNPACKED:
+        draw.text((x, y), entry, font=font, fill="#FFFFFF")
+        y += font.getsize(entry)[1]
+
+    #print("\r", end="", flush=True)
+    # time.sleep(1)
 
     # Display image.
     disp.image(image, rotation)
