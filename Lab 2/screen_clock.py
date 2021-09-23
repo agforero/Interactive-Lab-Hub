@@ -61,6 +61,12 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
+# Define buttons
+topButton = digitalio.DigitalInOut(board.D23)
+botButton = digitalio.DigitalInOut(board.D24)
+topButton.switch_to_input()
+botButton.switch_to_input()
+
 def unpackTimeToBin(TIME):
     units = [int(unit) for unit in TIME.split(',')]
     bins = [bin(unit)[2:] for unit in units]    
@@ -91,20 +97,26 @@ def unpackTimeToBin(TIME):
 
     return ret
 
+# import from lab2colors.py, get the colors, and set default scheme to white
+from lab2colors import getColors
+colors = getColors()
+scheme = 0
+
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
-    #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
+    # handle buttons
+    if not topButton.value:
+        scheme = (scheme + 1) % len(colors)
+
+    # draw text
     y = top
     TIME = time.strftime("%m,%d,%y,%H,%M,%S")
     TIME_UNPACKED = unpackTimeToBin(TIME)
-    for entry in TIME_UNPACKED:
-        draw.text((x, y), entry, font=font, fill="#FFFFFF")
+    for i, entry in enumerate(TIME_UNPACKED):
+        draw.text((x, y), entry, font=font, fill=colors[scheme][i])
         y += font.getsize(entry)[1]
-
-    #print("\r", end="", flush=True)
-    # time.sleep(1)
 
     # Display image.
     disp.image(image, rotation)
