@@ -54,7 +54,7 @@ x = 0
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 # font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
-font = ImageFont.truetype("SpaceMono-Regular.ttf", 18)
+font = ImageFont.truetype("unifont.ttf", 18)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -67,40 +67,62 @@ botButton = digitalio.DigitalInOut(board.D24)
 topButton.switch_to_input()
 botButton.switch_to_input()
 
-def unpackTimeToBin(TIME):
+def numToBase(n, b):
+    if n == 0:
+        return '0'
+
+    ret = ""
+    while n > 0:
+        ret = str(n % b) + ret
+        n //= b
+
+    return ret
+
+
+def unpackTimeToBase(TIME, b, spaces=2, indent=3):
     units = [int(unit) for unit in TIME.split(',')]
-    bins = [bin(unit)[2:] for unit in units]    
+    bins = [numToBase(unit, b) for unit in units]    
 
     bins_distributedzeros = []
     for entry in bins:
         bins_distributedzeros.append(f"{'0' * (8-len(entry))}" + entry)
 
-    ret = []
     labels = [
-            " month",
-            "   day",
-            "  year",
-            "  hour",
-            "minute",
-            "second"
+            u"MO",
+            u"DA",
+            u"YR",
+            u"HR",
+            u"MN",
+            u"SC",
             ]
+
+    symbols = {
+            '0': u' ',
+            '1': u'·',
+            '2': u':',
+            '3': u'∴',
+            '4': u'⁘',
+            '5': u'⁙'
+            }
+
+    ret = []
     for i, entry in enumerate(bins_distributedzeros):
-        thisAddition = labels[i]
+        thisAddition = labels[i] + ' '
         for ch in entry:
-            if ch == '0':
-                thisAddition += "  "
-
-            else:
-                thisAddition += "• "
-
+            thisAddition += symbols[ch] + ' '*spaces
+        
         ret.append(thisAddition)
 
     return ret
+
 
 # import from lab2colors.py, get the colors, and set default scheme to white
 from lab2colors import getColors
 colors = getColors()
 scheme = 0
+
+bases = [2, 3, 4, 5, 6]
+base_selection = 0 # holds the INDEX of the selection, not the value
 
 while True:
     # Draw a black filled box to clear the image.
@@ -110,14 +132,19 @@ while True:
     if not topButton.value:
         scheme = (scheme + 1) % len(colors)
 
+    if not botButton.value:
+        nxt = (base_selection + 1) % len(bases)
+        base_selection = nxt
+
     # draw text
     y = top
     TIME = time.strftime("%m,%d,%y,%H,%M,%S")
-    TIME_UNPACKED = unpackTimeToBin(TIME)
+    TIME_UNPACKED = unpackTimeToBase(TIME, bases[base_selection])
+    y += font.getsize(TIME_UNPACKED[0])[1]
     for i, entry in enumerate(TIME_UNPACKED):
         draw.text((x, y), entry, font=font, fill=colors[scheme][i])
         y += font.getsize(entry)[1]
 
     # Display image.
     disp.image(image, rotation)
-    time.sleep(1)
+    time.sleep(0.125)
