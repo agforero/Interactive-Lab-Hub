@@ -223,4 +223,23 @@ As always, make sure you document contributions and ideas from others explicitly
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
+## New additions as of Part 2:
 
+### [Here is a link](https://youtu.be/-kWImsijuwg) to a video demo of the updates! 🎬
+
+I added the ability to change the base using the bottom button. You can choose between base 2, 3, 4, 5 and 6. The dictionary for values `0` through `5` are as follows:
+
+```python
+symbols = {
+        '0': u' ',
+        '1': u'·',
+        '2': u':',
+        '3': u'∴',
+        '4': u'⁘',
+        '5': u'⁙'
+        }
+```
+
+For example, let's say we're 47 minutes into the hour. If the user has selected base `6` via the bottom button, this decimal `47` will be converted into a base-6 `115`. After normalizing this to have 8 symbols total, this will read `ㅤㅤㅤㅤㅤ_____··⁙`. They can convert this back to binary by hitting the bottom button again, at which point it will convert to `__·_····` (in other words, `00101111`). 
+
+I had to use underscores above since GitHub doesn't like including contiguous spaces between \`\` symbols.
