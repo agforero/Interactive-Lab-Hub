@@ -147,6 +147,7 @@ There are a few commands that my friend gives that WeatherBot 9000 is incapable 
 | WeatherBot, what's the weather going to be tomorrow? | Yes | This is exactly the kind of question I planned for. |
 | WeatherBot, is it going to rain tomorrow? | No | Again, no explicit mention of "weather" or "temperature". The Bot still doesn't know how to confirm or deny a forecast, instead of just telling someone what the forecast will be. |
 | Will I need a sweater tomorrow? | Yes | This is also (weirdly enough) exactly the kind of question I planned for. If anything, it's because I always wished I could ask my Amazon Echo if I'll need a sweater, and have it give me an explicit "yes", "no" or something else. |
+| Thanks! | No | I didn't plan that the user would be so cordial. I know the Echo thanks people if people thank it, so maybe I could do the same. |
 
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
