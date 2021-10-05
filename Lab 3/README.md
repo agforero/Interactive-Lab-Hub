@@ -141,7 +141,7 @@ There are a few commands that my friend gives that WeatherBot 9000 is incapable 
 
 | Command | Did it work? | Notes |
 | ------- | ------------ | ----------- |
-| WeatherBot, please tell me the temperature. | Yes | In the video demo, this works, but only because *I* assume that WeatherBot would impose "today" as the chosen time if no other time is given. In reality, the decision tree would not catch this, since he never specifies a time. |
+| WeatherBot, please tell me the temperature. | Yes | In the video demo, this works, but only because I assume that WeatherBot would impose "today" as the chosen time if no other time is given. In reality, the decision tree would not catch this, since he never specifies a time. |
 | WeatherBot, will I need an umbrella tomorrow? | No | "Umbrella" is not a key term. There is also no explicit mention of the word "weather".|
 | WeatherBot, is it sunny? | No | He leads by asking to confirm the forecast, instead of asking about it. The implication is something along the lines of, "Is the weather today sunny?" The question leaves out some key terms, so WeatherBot gets confused. |
 | WeatherBot, what's the weather going to be tomorrow? | Yes | This is exactly the kind of question I planned for. |
