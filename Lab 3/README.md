@@ -103,15 +103,50 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+![fig1](l3p1_storyboard.png)
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
 \*\***Please describe and document your process.**\*\*
+
+The idea was that the user would follow a specific dialogue tree when asking about the weather. <mark>Highlighted</mark> words signify specific terms the speech to text algorithm would look for. As you can tell from the arrows, some commands would naturally lead to others, e.g.:
+
+> What is the <mark>weather</mark> <mark>today?</mark>
+
+> In New York City, it's currently 75 degrees and sunny. You can expect a high of 79 degrees and a low of 68 degrees.
+
+At this point, they might extend the original question with a specific hour. Let's take the above example, only expanding it out a bit:
+
+> What is the <mark>weather</mark> <mark>today</mark> at <mark>4PM</mark>?
+
+> At 4PM, you can expect a sunny forecast without clouds. It will be 77 degrees, with a high of 79 degrees and a low of 72 degrees.
+
+I naturally supposed that they would *then* ask a question about if they needed a sweater/jacket/coat. Something like:
+
+> Will I need a <mark>jacket</mark> today?
+
+> No.
+
+When you scroll down to the video demo, though, you see how dialogue wasn't inherently a tree. There were some holes in my plan.
 
 ### Acting out the dialogue
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+
+### [Here is a link](https://youtu.be/caF24ku7pfs) to the video demo! 🎬
+
+There are a few commands that my friend gives that WeatherBot 9000 is incapable of answering. Here's a table showing what worked/didn't work:
+
+| Command | Did it work? | Notes |
+| ------- | ------------ | ----------- |
+| WeatherBot, please tell me the temperature. | Yes | In the video demo, this works, but only because *I* assume that WeatherBot would impose "today" as the chosen time if no other time is given. In reality, the decision tree would not catch this, since he never specifies a time. |
+| WeatherBot, will I need an umbrella tomorrow? | No | "Umbrella" is not a key term. There is also no explicit mention of the word "weather".|
+| WeatherBot, is it sunny? | No | He leads by asking to confirm the forecast, instead of asking about it. The implication is something along the lines of, "Is the weather today sunny?" The question leaves out some key terms, so WeatherBot gets confused. |
+| WeatherBot, what's the weather going to be tomorrow? | Yes | This is exactly the kind of question I planned for. |
+| WeatherBot, is it going to rain tomorrow? | No | Again, no explicit mention of "weather" or "temperature". The Bot still doesn't know how to confirm or deny a forecast, instead of just telling someone what the forecast will be. |
+| Will I need a sweater tomorrow? | Yes | This is also (weirdly enough) exactly the kind of question I planned for. If anything, it's because I always wished I could ask my Amazon Echo if I'll need a sweater, and have it give me an explicit "yes", "no" or something else. |
 
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
