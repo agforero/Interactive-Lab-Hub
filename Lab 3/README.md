@@ -161,8 +161,16 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
+
+The device needs to be a lot more adaptive to what people say. The queries can't be terribly sequential in nature; the ability to read one word shouldn't hinge on having previously read a word before. The user should be able to ask about a wide range of days in the past, present and future, and use different words commonly attributed to these days ("yesterday", "tomorrow", "next Tuesday", etc.).
+
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
+
+It could use a light to communicate that queries were read in successfully, or that it is currently talking.
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
+
+![IMG_4155](https://user-images.githubusercontent.com/55858146/137249106-9fadac80-ff8b-4fba-baab-79dd65eed22b.png)
 
 ## Prototype your system
 
@@ -173,26 +181,64 @@ The system should:
 
 *Document how the system works*
 
+The program works on a multi-step process:
+
+1. User asks a question about New York City weather.
+
+    a. If not relying on the speech-to-text algorithm, the wizard manually types the user's query as a command-line argument.
+
+2. The query is parsed, and key words are digested to understand the nature of the question: what day is being asked about, if the question concerns forecast, if the user is asking if they should wear warm clothes, etc. \*
+
+3. Depending on the nature of the question, WeatherBot prepares 4 distinct answers to address what the user said.
+
+4. The output of this script is piped into `festival`, which relays the output as audio.
+
+\* In order to get the data for the selected day, the program uses `requests` and `BeautifulSoup` to scrape [timeanddate.com](https://www.timeanddate.com/weather/usa/new-york/hourly).
+
+*Some constraints:*
+
+The user can't ask about:
+
+* Specific times
+
+* Locations other than NYC
+
 *Include videos or screencaptures of both the system and the controller.*
 
+[Self Demo 1](https://youtu.be/kvi033h-6MA)
+
+[Self Demo 2](https://youtu.be/V7a0g7tAGvQ)
+
+[Self Demo 3](https://youtu.be/D_3NkHj-d_M)
+
+[User Demo 1](https://youtu.be/rQsuBOtj9OE)
+
+[User Demo 2](https://youtu.be/GurQBqxkCg4)
+
 ## Test the system
+
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
 
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+It was able to very intelligently understand what day the user was talking about. The user can say any range of "last Tuesday" or "tomorrow" or "next Wednesday" and it can find weather data for these respective days, without using an API call. It's also pretty smart with understanding different variations of questions the user can ask: sometimes the user is asking about a specific forecast, or whether to wear warm clothing, or if it's going to rain, and WeatherBot can address all of these concerns.
+
+My second user asked some questions that WeatherBot didn't know how to answer. For example, "What is the coldest place on Earth today?" is not within WeatherBot's repertoire. The second user also noticed I was typing something, but incorrectly guessed that I was typing out WeatherBot's response.
+
+Both users found the `festival` voice funny, which, honestly, might not even be a bad thing.
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+`./weatherbot_working.sh "what will the weather be like next tuesday"` is not a very hard command to understand and execute. The wizard behind the curtain here is my act of transcribing what the user is saying as they say it, so that the program doesn't have to rely on the accuracy of the microphone and speech-to-text algorithm. `./weatherbot.sh` does actually try to use the mic, but the `_working` variation is a nice way to use the wizard to ensure accuracy. 
+
+The downside is that typing out the entirety of what the user says might be tedious or difficult, and it isn't exactly subtle, either.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
-
+If the system instead used a crisp microphone and powerful speech-to-text algorithm, it could be entirely independent of the wizard. The rest of the code is the same -- the only thing that changes is how it gets its input. Something I learned is to separate out these two. The means by which input is acquired should be independent of how the program actually processes these queries, so you can develop the logic of the program independent of any hardware or speech-detection issues.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
-
+Over time, the model could adjust to the user's voice and more easily understand their queries. In addition, if given a sufficient control over grammar, it could creatively come up with responses without relying on hardset logic to deliver responses. Other than speech, though, the only other sensor I could think to add would be a button to start a query.
