@@ -195,6 +195,12 @@ The program works on a multi-step process:
 
 \* In order to get the data for the selected day, the program uses `requests` and `BeautifulSoup` to scrape [timeanddate.com](https://www.timeanddate.com/weather/usa/new-york/hourly).
 
+*As a command, the wizard executes (the quotes are important):*
+
+```bash
+./weatherbot_working.sh "what will the weather be next tuesday"
+```
+
 *Some constraints:*
 
 The user can't ask about:
