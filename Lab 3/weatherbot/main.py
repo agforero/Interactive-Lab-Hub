@@ -75,14 +75,17 @@ def main():
         data = wf.readframes(4000)
         if len(data) == 0:
             break
-        #"""
+        """
         if rec.AcceptWaveform(data):
             print(rec.Result())
         else:
             print(rec.PartialResult())
-        #"""
+        """
 
     rec_dict = json.loads(rec.FinalResult())
+    
+    print("RECEIVED TEXT:")
+    print(rec_dict["text"] + "\n")
 
     Q = Query()
     Q.process_query(rec_dict["text"])
