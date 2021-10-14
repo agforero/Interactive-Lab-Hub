@@ -5,6 +5,7 @@ from vosk import Model, KaldiRecognizer
 import sys
 import os
 import wave
+import json
 
 
 def main():
@@ -81,11 +82,10 @@ def main():
             print(rec.PartialResult())
         #"""
 
-    print(rec.FinalResult())
-    print(type(rec.FinalResult()))
+    rec_dict = json.loads(rec.FinalResult())
 
     Q = Query()
-    Q.process_query("hello")
+    Q.process_query(rec_dict["text"])
 
 
 if __name__ == "__main__":
