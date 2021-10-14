@@ -211,6 +211,9 @@ class Query:
         if self.past:
             tts(f"The forecast for {self.selected_day} was {self.w.forecast}")
 
+        else:
+            tts(f"The forecast for {self.selected_day} will probably be {self.w.forecast}.")
+
     def output_normal(self):
         if self.past:
             tts(f"The weather for {self.selected_day} was as follows:")
