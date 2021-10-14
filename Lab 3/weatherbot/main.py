@@ -74,17 +74,18 @@ def main():
         data = wf.readframes(4000)
         if len(data) == 0:
             break
+        #"""
         if rec.AcceptWaveform(data):
             print(rec.Result())
         else:
             print(rec.PartialResult())
+        #"""
 
     print(rec.FinalResult())
-    return
-
+    print(type(rec.FinalResult()))
 
     Q = Query()
-    Q.process_query(argv[1:])
+    Q.process_query("hello")
 
 
 if __name__ == "__main__":
