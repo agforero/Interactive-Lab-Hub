@@ -138,5 +138,5 @@ class WeatherData:
             Wind travels at {self.wind} miles per hour on average.
             The humidity is an average of {self.humidity} percent.
             There is a {self.chance_of_rain} percent chance of rain.\
-        """
+            """
         )
