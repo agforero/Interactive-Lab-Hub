@@ -195,10 +195,16 @@ The program works on a multi-step process:
 
 \* In order to get the data for the selected day, the program uses `requests` and `BeautifulSoup` to scrape [timeanddate.com](https://www.timeanddate.com/weather/usa/new-york/hourly).
 
-*As a command, the wizard executes (the quotes are important):*
+As a command, the wizard executes (the quotes are important):
 
 ```bash
 ./weatherbot_working.sh "what will the weather be next tuesday"
+```
+
+The wizard can also execute the following command, which relies entirely on the VOSK speech-to-text API. The user just says their query in the 10 seconds allocated by the command. However, the microphone doesn't seem to fare well with picking up precise audio, and commands are usually either ignored or misinterpreted. Regardless, with a powerful microphone, the following command would work:
+
+```bash
+./weatherbot.sh
 ```
 
 *Some constraints:*
