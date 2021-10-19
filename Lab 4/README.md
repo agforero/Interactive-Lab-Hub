@@ -232,6 +232,8 @@ Build a cardbord prototype of your design.
 
 https://user-images.githubusercontent.com/55858146/137846805-7f83aabc-cd49-4e77-a34a-aa76d608954e.mp4
 
+(Please don't laugh at me for my messy room 🥺)
+
 LAB PART 2
 
 ### Part 2
