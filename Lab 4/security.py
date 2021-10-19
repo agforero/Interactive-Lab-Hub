@@ -58,7 +58,7 @@ while True:
         else:
             oled.fill(0)
 
-        print(firstDistFeet, distanceFeet, abs(firstDistFeet - distanceFeet))
+        #print(firstDistFeet, distanceFeet, abs(firstDistFeet - distanceFeet))
         oled.show()
         
 
