@@ -32,10 +32,9 @@ oled.fill(0)
 oled.show()
 
 
-print("VL53L1X Qwiic Test\n")
 ToF = qwiic.QwiicVL53L1X()
 if (ToF.sensor_init() == None):         # Begin returns 0 on a good init
-    print("Sensor online!\n")
+    print("Sensor online!")
 
 
 firstDistFeet = 0.0
@@ -52,7 +51,7 @@ while True:
         if firstDistFeet == 0.0:
             firstDistFeet = distanceFeet
             
-        elif abs(firstDistFeet - distanceFeet) > 0.2 * firstDistFeet:
+        elif abs(firstDistFeet - distanceFeet) > 0.3 * firstDistFeet:
             oled.fill(1)
 
         else:
