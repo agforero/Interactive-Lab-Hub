@@ -175,10 +175,25 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+![figure2](imgs/IMG_4242.png)
+
+![figure1](imgs/IMG_4243.png)
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+1. How accurate is the sensor?
+
+2. Will the device sit on a surface, be mounted on a wall, or just sit on the floor?
+
+3. How far can the sensor see?
+
+4. What is the reaction time of the sensor?
+
+5. How much variation is there between the values it reads?
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
+I am going to prototype the security motion sensor.
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
@@ -220,11 +235,21 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
+![figure3](imgs/IMG_4241.png)
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+1. Are the sensor and LED right next to each other, or spaced apart?
+
+2. What face does the box stand on? In other words, which side of the box faces outwards?
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+I am choosing option A!
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+I chose this design because I find it the most physically imposing. It should be obvious to a possible intruder that a space is being tracked, and arranging the components this way allows the box to be seen the easiest and stand out in a room. The sensor is still well-exposed to its environment in front of it.
 
 Build a cardbord prototype of your design.
 
@@ -233,6 +258,7 @@ Build a cardbord prototype of your design.
 https://user-images.githubusercontent.com/55858146/137846805-7f83aabc-cd49-4e77-a34a-aa76d608954e.mp4
 
 (Please don't laugh at me for my messy room 🥺)
+
 
 LAB PART 2
 
