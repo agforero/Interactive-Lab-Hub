@@ -303,3 +303,30 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
 
+![Screen Shot 2021-10-25 at 11 21 08 PM](https://user-images.githubusercontent.com/55858146/138803491-5ed8d99a-0746-40ad-9ccc-d6749110eb0b.png)
+
+A big constraint of the original design is that the motion detector only looked at a straight vector in front of it. I knew I could use the Servo Motor to rotate the motion detector and continually scan for fishy activity. Thus, I came up with a few ideas:
+
+A. Something that hangs from the ceiling and looks down while rotating the detector.
+
+B. Something that stands on a surface and rotates the detector. This instance is standed on its side, looking tall.
+
+C. Same thing as B, but the base sits on its largest face, looking wide.
+
+D. Same thing as C, only the detection confirmation light moves with the motion detector.
+
+I decided on C, since putting it on the ceiling would be pretty difficult and prone to fall down tragically. Here are a few pictures and videos of the final prototype:
+
+### [Final Prototype Video!](https://youtu.be/upM8Mj-Wl7w)
+
+### [Removing the Pi from the Prototype](https://youtu.be/y5bn0NHvEfM)
+
+![image](https://user-images.githubusercontent.com/55858146/138804637-b53d0149-1370-4995-8cb1-b08f26165c47.png)
+
+![image](https://user-images.githubusercontent.com/55858146/138804654-14a23826-b5aa-471e-b0f7-896dc72981ce.png)
+
+![image](https://user-images.githubusercontent.com/55858146/138804683-dbe93f95-4f76-4175-8d94-7bf2cf05680e.png)
+
+![image](https://user-images.githubusercontent.com/55858146/138804708-716700f9-b0cd-4c46-af82-061b1318bc07.png)
+
+![image](https://user-images.githubusercontent.com/55858146/138804732-60d2e52e-e460-4ae1-887c-65056169228a.png)
