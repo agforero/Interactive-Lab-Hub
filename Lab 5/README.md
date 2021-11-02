@@ -100,6 +100,22 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
+![image](https://user-images.githubusercontent.com/55858146/139761666-4217cebc-f985-46c3-95da-40632086a510.png)
+
+One thing the device could do is make a "comic book version" of different things in the environment. A tiny device that translates vision to a "drawing" of what it sees. This would use the contouring algorithm.
+
+![image](https://user-images.githubusercontent.com/55858146/139762347-608f3682-bbee-4d58-bb3c-85352e807fd0.png)
+
+Here, the device could recognize how many people are in a room.
+
+![image](https://user-images.githubusercontent.com/55858146/139769522-429f8fd3-ede8-44dc-a0e4-6b59f8f3e435.png)
+
+The third program kept giving me the following error, I'll be asking about it in class.
+
+![image](https://user-images.githubusercontent.com/55858146/139769445-f9d88c3f-0706-4f6d-8293-af05b9da8411.png)
+
+This program could detect how many posters are on a white wall, and suggest if the user should add more or less. Could help with room decoration!
+
 #### MediaPipe
 
 A more recent open source and efficient method of extracting information from video streams comes out of Google's [MediaPipe](https://mediapipe.dev/), which offers state of the art face, face mesh, hand pose, and body pose detection.
@@ -135,6 +151,10 @@ Each of the installs will take a while, please be patient. After successfully in
 Try the two main features of this script: 1) pinching for percentage control, and 2) "[Quiet Coyote](https://www.youtube.com/watch?v=qsKlNVpY7zg)" for instant percentage setting. Notice how this example uses hardcoded positions and relates those positions with a desired set of events, in `hand_pose.py` lines 48-53. 
 
 **\*\*\*Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.\*\*\***
+
+![image](https://user-images.githubusercontent.com/55858146/139770919-5b30f14d-7853-4b00-9c8c-0f042bab69c5.png)
+
+Volume control: the user could wave their hand in front of the device with their index finger and thumb spaced apart widely, for high volume. The closer they pinch their fingers together, the quieter the music becomes.
 
 (You might also consider how this notion of percentage control with hand tracking might be used in some of the physical UI you may have experimented with in the last lab, for instance in controlling a servo or rotary encoder.)
 
