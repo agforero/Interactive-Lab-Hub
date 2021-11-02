@@ -192,6 +192,13 @@ This might take a while to get fully installed. After installation, connect your
 
 **\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.\*\*\***
 
+![image](https://user-images.githubusercontent.com/55858146/139771642-72fa42cd-4519-466d-95c7-7d1783989b24.png)
+
+It's trying to detect what's in its periphery, but it just thinks my face is a mask.
+
+![image](https://user-images.githubusercontent.com/55858146/139771693-2d77595c-6dfa-4545-993d-fb43e3a051ba.png)
+
+If I hold my PS4 controller up to it, it recognizes it as `background`. This said, if we were to train it to detect an empty versus a full trash bin, we could have a device that alerts the user when they should throw out their trash. Could help senior citizens if no one else.
 
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
 
