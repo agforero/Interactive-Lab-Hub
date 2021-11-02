@@ -226,21 +226,55 @@ Try out different interaction outputs and inputs.
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
 
+An emotion detector. Specifically, this early iteration of it just detects if you're happy, and lights up the thin adafruit LED from the last lab. I trained a model using TeachableMachines (I learned the hard way that I had to mirror the input images, since the Pi's webcam mirrors), and had it detect the following emotions:
+
+* Happy
+* Sad
+* Angry
+* Shocked
+* Neutral
+* Background
+
 ### Part C
 ### Test the interaction prototype
 
 Now flight test your interactive prototype and **note down your observations**:
+
 For example:
+
 1. When does it what it is supposed to do?
-1. When does it fail?
-1. When it fails, why does it fail?
-1. Based on the behavior you have seen, what other scenarios could cause problems?
+
+When I make a happy face and it detects it, it (mostly) lights up the display correctly.
+
+2. When does it fail?
+
+A lot. For some reason, instead of normally reading "neutral" on my face, it prefers to read "shocked" constantly. I don't think I'm that exciting.
+
+3. When it fails, why does it fail?
+
+It fails because it detects the wrong emotion. Sometimes I'm not making a happy face, and it doesn't correctly pick up on this; other times, I'm literally hurting from how much I'm beaming and it still won't light up the display.
+
+4. Based on the behavior you have seen, what other scenarios could cause problems?
+
+If the user is wearing different clothes, or even just generally looks different from me. If the input is somehow mirrored, like if they use a different webcam. If the user is standing a considerable distance away from the camera.
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
+
 1. Are they aware of the uncertainties in the system?
-1. How bad would they be impacted by a miss classification?
-1. How could change your interactive system to address this?
-1. Are there optimizations you can try to do on your sense-making algorithm.
+
+They probably know that the model won't work 100% of the time. Hell, they probably know that it won't work even 50% of the time. It's very much a prototype.
+
+2. How bad would they be impacted by a misclassification?
+
+It depends what this device is applied to. If this is a simple emotion tracker for when someone is playing a game or using a program, it may misrepresent how the user feels when using the program. This might not impact the user too severely, unless they care about tracking their emotions over time. More than that, it may impact the designer of the software being tested for: if the model says users are constantly shocked when using their app, it might raise some alarms.
+
+3. How could change your interactive system to address this?
+
+Simply add more training data, with more people, at a bunch of different angles.
+
+4. Are there optimizations you can try to do on your sense-making algorithm.
+
+Not really. It just requires a bunch of data.
 
 ### Part D
 ### Characterize your own Observant system
@@ -256,6 +290,8 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
+
+### [Here's a video demo](https://youtu.be/cJCRDaXwRb0) answering the above questions! 🎬
 
 ### Part 2.
 
