@@ -305,9 +305,11 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 The blue light lights up when the model recognizes that the user is smiling. 
 
-The device also opens up so you can unplug the camera from the Pi and plug it into a more powerful computer, allowing you to train a model on [Google's Teachable Machine](https://teachablemachine.withgoogle.com/) on one computer before transferring the .h5 model back onto the Pi.
+The device also opens up so you can unplug the camera from the Pi and plug it into a more powerful computer, allowing you to train a model on [Google's Teachable Machine](https://teachablemachine.withgoogle.com/) on one computer before transferring the .h5 model back onto the Pi. Generally speaking, the model performed much better than last time, since I was absolutely sure to keep the camera in place and use the Provision model the whole time. It still wasn't *always* able to tell when I was smiling, but it at least didn't just assume I was always shocked -- it actually did well in classifying a `neutral` face.
 
-While the device monitors your feelings, it also constantly writes the data to a local .txt file, allowing you to see how happy you are on average using howamidoing.py. I was recorded as being 21.41% happy, though I did start the script before actually starting the video, so the denominator is disproportionately large.
+I used a thin red piece of paper (originally part of the manual for the HD Camera) to line up the device whenever I used it, ensuring the camera was in the same position even after picking up the box to plug the camera elsewhere. You can see this piece of paper in the fourth image below.
+
+While the device monitors your feelings, it also constantly writes the data to a local .txt file (`output.txt`), allowing you to see how happy you are on average using `howamidoing.py`. I was recorded as being 21.41% happy, though I did start the script before actually starting the video, so the denominator was disproportionately large. The user can reset this data by running `resetrecords.py`.
 
 crown witness.mp4: [https://youtu.be/IpQDwkX8EKc](https://youtu.be/IpQDwkX8EKc)
 
