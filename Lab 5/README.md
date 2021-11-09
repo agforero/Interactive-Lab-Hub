@@ -298,3 +298,27 @@ During the lecture, we mentioned questions to help characterize a material:
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
+
+### [Here's a link to a YouTube video](https://youtu.be/iPqL_l9Tj1o) showcasing the final result! 🎬
+
+#### Description:
+
+The blue light lights up when the model recognizes that the user is smiling. 
+
+The device also opens up so you can unplug the camera from the Pi and plug it into a more powerful computer, allowing you to train a model on [Google's Teachable Machine](https://teachablemachine.withgoogle.com/) on one computer before transferring the .h5 model back onto the Pi.
+
+While the device monitors your feelings, it also constantly writes the data to a local .txt file, allowing you to see how happy you are on average using howamidoing.py. I was recorded as being 21.41% happy, though I did start the script before actually starting the video, so the denominator is disproportionately large.
+
+crown witness.mp4: [https://youtu.be/IpQDwkX8EKc](https://youtu.be/IpQDwkX8EKc)
+
+#### Some more pictures:
+
+![image](https://user-images.githubusercontent.com/55858146/140864756-43f10ee1-7da1-48be-a983-6074baa42c5c.png)
+
+![image](https://user-images.githubusercontent.com/55858146/140864775-b02ca2cf-bd3b-482b-a776-e80d1a15ed17.png)
+
+![image](https://user-images.githubusercontent.com/55858146/140864794-c8bdc163-0320-4561-899b-56be9d001cdb.png)
+
+![image](https://user-images.githubusercontent.com/55858146/140864798-ad993787-d073-448e-8418-db8fc8b189f8.png)
+
+![image](https://user-images.githubusercontent.com/55858146/140864808-cda6c9e6-9ac3-4460-8f93-b6538fd1f44a.png)
