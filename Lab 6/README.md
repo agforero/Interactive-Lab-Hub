@@ -86,6 +86,12 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
+1. A rock-paper-scissors game between two devices. A button for each, and then some centralized program displays who won.
+2. Morse code transmittor. If one user presses down on a button, the other hears a beep sound. 
+3. Cute "I'm thinking of you" thing for long-distance relationships. Press the button when you're thinking of your S/O.
+4. Paging system to let the other user know someone is there to see them. Like, the kind of thing a secretary has.
+5. The kind of thing nukes are launched with. Both people need to press the button for a thing to happen. Maybe it's a pretend game where the nuke isn't launched unless both users press a button simultaneously.
+
 ### Part C
 ### Streaming a Sensor
 
@@ -106,6 +112,10 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
  ```
 
 **\*\*\*Include a picture of your setup here: what did you see on MQTT Explorer?\*\*\***
+
+![image](https://user-images.githubusercontent.com/55858146/141870158-bcf2856d-5a56-4611-b72a-094bd089367c.png)
+
+
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
 
