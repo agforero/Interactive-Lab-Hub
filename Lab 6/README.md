@@ -156,6 +156,9 @@ Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
 
+![image](https://user-images.githubusercontent.com/55858146/141878739-f0021f54-b326-4039-a046-5e33cb6f7b7e.png)
+
+It seems as though the script already supports it! All you have to do is press the top button on the Adafruit miniPiTFT, and it publishes the color to MQTT. I added a `print()` call to check this.
 
 ### Part E
 ### Make it your own
