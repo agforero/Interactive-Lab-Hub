@@ -119,6 +119,8 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
 
+I used the motion detector (the Qwiic Multi Distance thingy).
+
 ![image](https://user-images.githubusercontent.com/55858146/141878246-0d2d6e02-ad27-4dd5-8956-0c9259efae36.png)
 
 ![image](https://user-images.githubusercontent.com/55858146/141878201-3c73a544-13db-4ef5-931c-02aeec2453ea.png)
