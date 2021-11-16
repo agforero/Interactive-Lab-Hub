@@ -167,11 +167,19 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
+Our design is a light that alerts the user when the best time is to buy DogeCoin. An analyst on one end presses an indicator when they feel the time is right, and the client on the other end will see the light turn on when this signal is pressed.
+
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
+
+![image](https://user-images.githubusercontent.com/55858146/141879695-c845a59c-7b21-4ae5-bc27-7bf1f362744e.png)
 
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
 
+The client's side of things is pretty clear. If the light turns on, it's time to buy DogeCoin. For the analyst, a little figure of a dog would be used to indicate the role of the sensor. It wouldn't take much explanation for either side of the program.
+
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
+
+### [Here is a link](https://youtu.be/Opvp9KRdRm4) to Joe and my demo video!! 🎬
 
 <!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
 
